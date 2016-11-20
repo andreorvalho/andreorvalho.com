@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: andreorvalho_development
+  username: andreorvalho_user
+  password: andreorvalho_pass
+  host: localhost
+
+test:
+  <<: *default
+  database: andreorvalho_test
+  username: andreorvalho
+  password: andreorvalho
+  host: localhost
+
+production:
+  <<: *default
+  database: andreorvalho_production
