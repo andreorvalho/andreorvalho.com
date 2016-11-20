@@ -1,5 +1,6 @@
-# Ignore bundler config.
+# Dependency directories
 /.bundle
+/node_modules
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
@@ -21,3 +22,4 @@
 /spec/reports/
 .DS_Store
 **/.DS_Store
+/public/assets/

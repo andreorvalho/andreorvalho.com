@@ -1,0 +1,29 @@
+{
+  "name": "andreorvalho.com",
+  "version": "1.0.0",
+  "description": "script to bundle assets for rails",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreorvalho/andreorvalho.com.git"
+  },
+  "keywords": [
+    "assets"
+  ],
+  "author": "andre.orvalho@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreorvalho/andreorvalho.com/issues"
+  },
+  "homepage": "https://github.com/andreorvalho/andreorvalho.com#readme",
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.2.0"
+  }
+}
