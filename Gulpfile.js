@@ -1,6 +1,8 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
+var rename = require('gulp-rename');
+var googleWebFonts = require('gulp-google-webfonts');
 
 // source and distribution folder
 var source = 'app/assets/stylesheets/',
@@ -20,7 +22,7 @@ var fontAwesome = {
 var fonts = {
       in: [ source + 'fonts/*.*',
             bootstrapSass.in + 'assets/fonts/**/*',
-            fontAwesome.in + '/fonts/**/*' ],
+            fontAwesome.in + '/fonts/**/*'],
       out: dest + 'fonts/'
     };
 
@@ -40,11 +42,13 @@ var scss = {
 
 gulp.task('fonts', function () {
     gulp.src(fonts.in)
+        .pipe(googleWebFonts({}))
         .pipe(gulp.dest(fonts.out));
 });
 
 gulp.task('sass', ['fonts'], function () {
     gulp.src(scss.in)
+        .pipe(rename('application'))
         .pipe(sourcemaps.init())
         .pipe(sass(scss.sassOpts))
         .pipe(sourcemaps.write())
