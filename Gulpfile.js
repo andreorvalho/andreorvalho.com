@@ -3,6 +3,7 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var rename = require('gulp-rename');
 var googleWebFonts = require('gulp-google-webfonts');
+var minify = require('gulp-minify-css');
 
 // source and distribution folder
 var source = 'app/assets/stylesheets/',
@@ -51,6 +52,10 @@ gulp.task('sass', ['fonts'], function () {
         .pipe(rename('application'))
         .pipe(sourcemaps.init())
         .pipe(sass(scss.sassOpts))
+        .pipe(minify({keepBreaks: true}))
+        .pipe(rename({
+            suffix: '.min'
+        }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(scss.out));
 });
