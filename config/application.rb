@@ -30,6 +30,5 @@ module AndreorvalhoCom
     end
 
     config.autoload_paths += %W(#{config.root}/lib)
-    config.active_record.raise_in_transactional_callbacks = true
   end
 end
