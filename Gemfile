@@ -37,6 +37,8 @@ group :development, :test do
   gem 'meta_request'
   # This will show the errors in a easier way
   gem "better_errors"
+  # start the processes
+  gem "foreman"
 end
 
 group :development do
