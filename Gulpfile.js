@@ -23,7 +23,8 @@ var fontAwesome = {
 var scss = {
   in: source + 'assets.css.scss',
   out: dest + 'css/',
-  watch: source + '/**/*.scss',
+  watch: [ source + '/**/*.scss',
+           "!" + source + "/application.css.scss"],
   sassOpts: {
     outputStyle: 'nested',
     precison: 3,
