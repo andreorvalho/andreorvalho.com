@@ -21,8 +21,8 @@ var fontAwesome = {
 
 // Our scss source folder: .scss files
 var scss = {
-  in: source + 'assets.css.scss',
-  out: dest + 'css/',
+  in: source + 'main.css.scss',
+  out: dest + 'stylesheets/',
   watch: [ source + '/**/*.scss',
            "!" + source + "/application.css.scss"],
   sassOpts: {
@@ -38,10 +38,9 @@ var cssImportOpts = {
   filter: /^https:\/\//gi // process only http urls
 };
 
-
 gulp.task('sass', function () {
   gulp.src(scss.in)
-  .pipe(rename('application'))
+  .pipe(rename('main'))
   .pipe(sourcemaps.init())
   .pipe(sass(scss.sassOpts))
   .pipe(cleanCSS())

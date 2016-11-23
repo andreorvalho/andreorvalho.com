@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/andreorvalho/andreorvalho.com#readme",
   "devDependencies": {
+    "6to5-core": "^3.6.5",
+    "6to5-loader": "^3.0.0",
     "bootstrap-sass": "^3.3.7",
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
@@ -27,6 +29,7 @@
     "gulp-cssimport": "^5.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
-    "gulp-sourcemaps": "^2.2.0"
+    "gulp-sourcemaps": "^2.2.0",
+    "webpack": "^1.13.3"
   }
 }
